@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(6,128,185);
+}
+.note{
+    position: absolute;
+    background: #312c33;
+    width: 300px;
+    height: 50px;
+    top: 20%;
+    left: 40%
+}
+.area{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    height: 0px; /*200px*/
+    overflow: hidden;
+    outline: none;
+    border: none;
+}
+textarea{
+    position:  relative;
+    min-width: 300px;
+    height: 200px;
+    background: #fff;
+    color: #000;
+    font-size: 20px;
+    font-family: arial;
+    outline: none;
+    letter-spacing: 1px;
+}
+h1{
+    position: absolute;
+    color: #fff;
+    font-family: Forte;
+    top: -15px;
+    left: 5px;
+}
+i{
+    position: absolute;
+    top: 24%;
+    left: 88%;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    transform: rotate(45deg);
+}
+#click:checked ~ i{
+    transform: rotate(270deg);
+    transition: .5s;
+}
+#click:checked ~ .area{
+    height: 200px;
+    transition: .5s;
+}
+#click{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+    right: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
