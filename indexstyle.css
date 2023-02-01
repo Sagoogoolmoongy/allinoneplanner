@@ -39,3 +39,19 @@ nav ul li a{
     color: rgb(0, 0, 0);
     font-size: 17px;
 }
+
+.content{
+    text-align: center;
+}
+.content h1{
+    font-size: 160px;
+    color: black;
+    font-weight: 600;
+
+}
+.content a{
+    text-decoration: none;
+    display: inline-block;
+    color: black;
+    font-size: 24px;
+}
