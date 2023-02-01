@@ -39,3 +39,27 @@ body {
   }
 
   
+
+
+  .HeadLine{
+    background-color: darkslategrey;
+}
+
+.nav{
+    background: #13a258;
+    margin-left: -18px;
+    overflow: hidden;
+}
+.nav a{
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+    color: #000000;
+    font-size: 1.7em;
+    display:block;
+    float: left;
+}
+.nav a:hover{
+    background: rgb(15, 173, 94);
+    color:rgb(0, 0, 0);
+}
