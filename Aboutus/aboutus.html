@@ -7,6 +7,8 @@
     <title>About US Section</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="aboutus.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
    
 
@@ -17,7 +19,7 @@
 
     <div class="hero">
 
-        <img src="images/1920x1080-HD-Images-For-Desktop.png" class="back-image">
+        <img src="../images/1920x1080-HD-Images-For-Desktop.png" class="back-image">
         <nav>
             <img src="../images/logo.png" class="logo">
             <ul>
@@ -53,7 +55,17 @@
                         
                     </p>
                     <div class="button">
-                        <a href="">Read More</a>
+                        <a href="#" onclick="readmore()">Read More</a>
+            <script type="text/javascript">
+                function readmore(){
+                    swal({
+                    icon: 'error',
+                    title: 'WIP',
+                    text: 'this page is work in progress',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                })
+                }
+                </script>
                     </div>
                 </div>
                 <div class="social">
@@ -64,9 +76,6 @@
 
                     <a href="https://www.youtube.com/@s4goo">Technical Developer:)<i class="fab fa-youtube"></i></a>
                 </div>
-            </div>
-            <div class="image-section">
-                <img src="C:\Users\admin\Desktop\image\world picture.webp">
             </div>
         </div>
     </div>      
