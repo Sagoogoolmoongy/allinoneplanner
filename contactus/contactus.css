@@ -70,7 +70,8 @@ form{
   }
   
   nav .logo{
-    width: 80px;
+    width: 100px;
+    height: 200px;
   }
   nav ul li{
     list-style: none;

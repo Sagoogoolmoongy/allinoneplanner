@@ -135,3 +135,8 @@
     background: #3878a6;
     color:rgb(0, 0, 0);
 }
+
+nav .logo{
+    height: 200px;
+    width: 100px;
+}
