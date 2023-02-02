@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="planner.css">
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,9 +74,18 @@
     </div>
     <button class="btn btn-primary" 
         id="addBtn" style=
-        "background-color:rgb(27, 57, 140)">
+        "background-color:rgb(27, 57, 140)" onclick="newnote()">
         Add Note
     </button>
+    <script type="text/javascript">
+        function newnote(){
+            swal({
+            icon: 'success',
+            title: 'Made a new plan!',
+            text: 'Success to make a new note!',
+        })
+        }
+    </script>
 </div>
 </div>
 <hr>
