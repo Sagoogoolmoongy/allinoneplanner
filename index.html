@@ -18,7 +18,7 @@
                 <li><a href="Aboutus/aboutus.html">About Us</a></li>
                 <li><a href="contactus/contactus.html">Contact us</a></li>
                 <li><a href="makeplan/makeaplan.html">Make Plan</a></li>
-                <li><a href="Login/Log in.html">Log in</a></li>
+                <li><a href="#" onclick="login();">Log in</a></li>
             </ul>
         </nav>
         <div class="content">
@@ -33,6 +33,15 @@
                     footer: '<a href="">Why do I have this issue?</a>'
                 })
                 }
+                function login(){
+                    swal({
+                    icon: 'error',
+                    title: 'oops..',
+                    text: 'login failed',
+                    footer: '<a href="">Why do I have this issue?</a>'
+                })
+                }
+                
             </script>
 
             
