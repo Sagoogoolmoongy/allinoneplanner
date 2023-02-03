@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #notebook-app {
+          width: 600px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        textarea {
+          width: 500px;
+          height: 200px;
+          margin-bottom: 10px;
+          padding: 10px;
+          font-size: 16px;
+          border-radius: 5px;
+          border: 1px solid gray;
+          background-image: url(), linear-gradient(to bottom, transparent 75%, lightgray 75%);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          transition: all 0.5s ease-in-out;
+        }
+        textarea:focus {
+          border: 1px solid lightblue;
+          box-shadow: 0 0 10px lightblue;
+        }
+        #display-area {
+          height: 200px;
+          width: 500px;
+          overflow: auto;
+          
+          background-size: cover;
+          border: 1px solid black;
+          padding: 10px;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          transition: all 0.5s ease-in-out;
+        }
+        #display-area:hover {
+          background-color: lightblue;
+          color: white;
+        }
+        button {
+          padding: 10px 20px;
+          font-size: 16px;
+          border-radius: 5px;
+          margin-right: 10px;
+          cursor: pointer;
+          border: none;
+          background-color: lightblue;
+          color: white;
+          transition: all 0.5s ease-in-out;
+        }
+        button:hover {
+          background-color: white;
+          color: lightblue;
+          border: 1px solid lightblue;
+        }
+      </style>
+
+
+</head>
+<body>
+    <div id="notebook-app">
+        <h1>My Notebook</h1>
+        <textarea id="note-text">Enter your note text here</textarea><br><br>
+        <button onclick="displayNote()">Display Note</button>
+        <button onclick="saveNote()">Save Note</button>
+        <button onclick="screenshotNote()">Screenshot</button><br><br>
+        <div id="display-area"></div>
+      </div>
+  
+      <script>
+        function displayNote() {
+          var noteText = document.getElementById("note-text").value;
+          document.getElementById("display-area").innerHTML = noteText;
+        }
+  
+        function saveNote() {
+        // Code to save the note to a file or database
+        // This code would typically make an AJAX call to a server-side script
+        // to handle the saving of the note text
+        alert("Note saved!");
+      }
+      function screenshotNote() {
+        // Code to take a screenshot of the note
+        // This code would typically use JavaScript libraries
+        // such as html2canvas to capture an image of the note
+        alert("Screenshot taken!");
+      }
+
+    </script>
+</body>
+</html>
