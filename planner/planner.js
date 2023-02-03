@@ -74,14 +74,15 @@ function deleteNote(index) {
         }
         if (result.isConfirmed) {
             let notes = localStorage.getItem("notes");
+            if (notes == null) notesObj = [];
             notesObj = JSON.parse(notes);
   
             notesObj.splice(index, 1);
   
-            localStorage.setItem("notes", JSON.stringify(notesObj)); 
+            localStorage.setItem("notes", 
+            JSON.stringify(notesObj));
           }
       })
 }
-
 
 
