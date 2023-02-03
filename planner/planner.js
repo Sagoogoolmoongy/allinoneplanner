@@ -73,16 +73,22 @@ function deleteNote(index) {
           )
         }
         if (result.isConfirmed) {
-            let notes = localStorage.getItem("notes");
-            if (notes == null) notesObj = [];
-            notesObj = JSON.parse(notes);
+            function delconfirm() {
+                let notes = localStorage.getItem("notes");
   
-            notesObj.splice(index, 1);
+    if (notes == null) notesObj = [];
+    else notesObj = JSON.parse(notes);
   
-            localStorage.setItem("notes", 
-            JSON.stringify(notesObj));
+    notesObj.splice(index, 1);
+  
+    localStorage.setItem("notes", 
+        JSON.stringify(notesObj));
+            }
+            delconfirm();
           }
       })
 }
+
+
 
 
