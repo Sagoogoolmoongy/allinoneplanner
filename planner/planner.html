@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="planner.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,7 +78,7 @@
     </button>
     <script type="text/javascript">
         function newnote(){
-            swal({
+            swal.fire({
             icon: 'success',
             title: 'Made a new plan!',
             text: 'Success to make a new note!',
