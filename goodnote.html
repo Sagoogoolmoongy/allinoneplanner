@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GoodNote</title>
 </head>
 <body>
     <!DOCTYPE html>
@@ -19,7 +19,6 @@
   </style>
 </head>
 <body>
-  <p>log in area</p>
   <script>
     let emoticon;
 
@@ -70,6 +69,67 @@
     }
   </script>
 </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #note-container {
+      width: 500px;
+      height: 300px;
+      border: 2px solid lightgray;
+      padding: 10px;
+      margin: 20px auto;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80%;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    button {
+      width: 100px;
+      height: 30px;
+      margin-top: 10px;
+      background-color: cornflowerblue;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="note-container">
+    <textarea id="note-textarea"></textarea>
+    <button id="save-button">Save</button>
+    <button id="screenshot-button">Screenshot</button>
+  </div>
+
+  <script>
+    const textarea = document.getElementById("note-textarea");
+    const saveButton = document.getElementById("save-button");
+    const screenshotButton = document.getElementById("screenshot-button");
+
+    saveButton.addEventListener("click", function() {
+      localStorage.setItem("note", textarea.value);
+      alert("Note saved successfully!");
+    });
+
+    screenshotButton.addEventListener("click", function() {
+      const noteContainer = document.getElementById("note-container");
+      const img = new Image();
+      img.src = noteContainer.toDataURL();
+      window.open(img.src);
+    });
+
+    if (localStorage.getItem("note")) {
+      textarea.value = localStorage.getItem("note");
+    }
+  </script>
+</body>
+</html>
 </html>
 
 </body>

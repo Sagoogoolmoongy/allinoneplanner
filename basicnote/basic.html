@@ -34,9 +34,22 @@
         }
 
         .HeadLine{
-    background-color: darkslategrey;
+    background-color: darkslategrey;}
+    .button {
+        width: 100px;
+        height: 30px;
+        background-color: #0575E6;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 16px;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+    </style>
+
     
-        }</style>
 
 </head>
 <body style="background-color:black">
@@ -44,9 +57,9 @@
         <form style="position:relative; top:200px;">
             <input name="name"  type="text" placeholder="Enter Your Purpose">
             <input name="email "type="email" placeholder="Enter your reward">
-            <input name="contact_no" type="number" placeholder="Enter your wise saying">
+            <input name="contact_no" type="text" placeholder="Enter your wise saying">
             <textarea name="message" name="" id="" cols="30" rows="10" placeholder="Enter Your Plan"></textarea>
-            <input type="submit" value="send">
+            <div class="button" id="save">Save</div>
         </form>
 
     </div>
@@ -60,6 +73,14 @@
             <li><a href="../makeplan/makeaplan.html">Make Plan</a></li>
         </ul>
     </nav>
-
+   <body>
+        <script>
+            const saveButton = document.getElementById("save");
+            saveButton.addEventListener("click", function() {
+        alert("Note saved!");
+      });
+        </script>
+   
+   </body> 
 </body>
 </html>
