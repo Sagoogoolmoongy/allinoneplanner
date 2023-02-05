@@ -20,7 +20,7 @@
 
         
 
-        <img src="images/1920x1080-HD-Images-For-Desktop.png" class="back-image">
+        
         <nav>
             <img src="images/logo.png" class="logo">
             <ul>
@@ -65,7 +65,74 @@
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
 
+    <html>
+  <head>
+    <style>
+      #background {
+        height: 100vh;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="background"></div>
     
+    <script>
+      const imageFolder = 'path/to/image/folder/';
+      let images = [];
+      let i = 0;
+      
+      // load all images from the folder
+      function loadImages() {
+        fetch(imageFolder)
+          .then(response => response.text())
+          .then(data => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(data, 'text/html');
+            const links = htmlDoc.querySelectorAll('a');
+            for (let link of links) {
+              if (link.href.endsWith('.jpg') || link.href.endsWith('.jpeg') || link.href.endsWith('.png')) {
+                images.push(imageFolder + link.innerHTML);
+              }
+            }
+            setInterval(() => {
+              document.querySelector('#background').style.backgroundImage = `url('${images[i % images.length]}')`;
+              i++;
+            }, 7000);
+          });
+      }
+      
+      loadImages();
+    </script>
+  </body>
+</html>
+        <div id="background">
+</div>
+<div id="background">
+</div>
+        <section></section>
+
+        <script>
+          function changeBg(){
+            const images = [
+              'url("images/studyimage1.jpg")',
+              'url("images/studyimage2.jpg")',
+              'url("images/studyimage3.jpg")',
+              'url("images/studyimage4.jpg")',
+              'url("images/studyimage5.jpg")',
+              'url("images/studyimage6.jpg")',
+              'url("images/studyimage7.jpg")',
+              'url("images/studyimage8.jpg")',
+              'url("images/studyimage9.jpg")',
+              'url("images/studyimage10.jpg")'
+            ]
+
+            const section = document.querySelector('section')
+            const bg = images[Math.floor(Math.random() * images.length)];
+            section.style.backgroundImage = bg;
+          }
+          setInterval(changeBg, 2000)
+        </script>
     
 </body>
 </html>
