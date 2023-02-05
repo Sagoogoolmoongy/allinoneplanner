@@ -1,76 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <!DOCTYPE html>
-<html>
-<head>
-  <script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-  </style>
-</head>
-<body>
-  <p>log in area</p>
-  <script>
-    let emoticon;
+  <div class="hero">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+        <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+      </div>
+      <div class="social-icons">
 
-    function setup() {
-      createCanvas(500, 500);
-      emoticon = new Emoticon(width / 2, height / 2);
-    }
+        <img src="../images/facebook.png">
+        <img src="../images/google.png">
+        <img src="../images/twitter.png">
+  
+      </div>
+      <form id="Login" class="input-group">
+        <input type="text" class="input-field" placeholder="User Id" required>
+        <input type="text" class="input-field" placeholder="Enter Password" required>
+        <input type="checkbox" class="chech-box"><span>Remember Password</span>
+        <button type="submit" class="submit-btn">Log In</button>
+      </form>
+      <form id="register" class="input-group">
+        <input type="text" class="input-field" placeholder="User Id" required>
+        <input type="email" class="input-field" placeholder="Email Id" required>
+        <input type="text" class="input-field" placeholder="Enter Password" required>
+        <input type="checkbox" class="chech-box"><span>I agree to the terms & conditions</span>
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+    </div>
+   
+  </div>
 
-    function draw() {
-      background(255);
-      emoticon.update();
-      emoticon.display();
-    }
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
 
-    class Emoticon {
-      constructor(x, y) {
-        this.x = x;
-        this.y = y;
-        this.speed = 5;
-        this.size = 50;
-        this.trail = [];
+      function register(){
+          x.style.left = "-400px";
+          y.style.left = "50px";
+          z.style.left = "110px";
       }
 
-      update() {
-        this.x += random(-this.speed, this.speed);
-        this.y += random(-this.speed, this.speed);
-        this.trail.push([this.x, this.y]);
-        if (this.trail.length > 50) {
-          this.trail.splice(0, 1);
-        }
+      function login(){
+          x.style.left = "50px";
+          y.style.left = "450px";
+          z.style.left = "0";
       }
-
-      display() {
-        fill(255, 204, 0);
-        noStroke();
-        textSize(this.size);
-        text("😊", this.x, this.y);
-
-        stroke(255, 204, 0, 50);
-        strokeWeight(5);
-        noFill();
-        beginShape();
-        for (let i = 0; i < this.trail.length; i++) {
-          vertex(this.trail[i][0], this.trail[i][1]);
-        }
-        endShape();
-      }
-    }
-  </script>
-</body>
-</html>
-
+    
+    </script>
+  
 </body>
 </html>
