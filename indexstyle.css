@@ -143,3 +143,12 @@ section{
         opacity: 0;
     }
 }
+.blink6{
+    animation: blink 10s linear infinite;
+    color: beige;
+}
+@keyframes blink6{
+    50%{
+        opacity: 0;
+    }
+}
