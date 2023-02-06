@@ -99,7 +99,7 @@ section{
     }
 }
 .blink1{
-    animation: blink 3s linear infinite;
+    animation: blink 5s linear infinite;
     color: beige;
 }
 @keyframes blink1{
@@ -117,7 +117,7 @@ section{
     }
 }
 .blink3{
-    animation: blink 9s linear infinite;
+    animation: blink 7s linear infinite;
     color: beige;
 }
 @keyframes blink3{
@@ -126,7 +126,7 @@ section{
     }
 }
 .blink4{
-    animation: blink 12s linear infinite;
+    animation: blink 8s linear infinite;
     color: beige;
 }
 @keyframes blink4{
@@ -135,7 +135,7 @@ section{
     }
 }
 .blink5{
-    animation: blink 15s linear infinite;
+    animation: blink 9s linear infinite;
     color: beige;
 }
 @keyframes blink5{
