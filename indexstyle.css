@@ -5,16 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.hero{
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(12,3,51,0.3);
-    position: relative;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 nav{
     width: 100%;
     position: absolute;
@@ -37,7 +28,7 @@ nav ul li{
 }
 nav ul li a{
     text-decoration: none;
-    color: #fff;
+    color: #000000;
     font-size: 17px;
 }
 
@@ -46,20 +37,20 @@ nav ul li a{
 }
 .content h1{
     font-size: 90px;
-    color: #fff;
+    color: #000000;
     font-weight: 600;
     transition: 0.5s;
 }
 .content h1:hover{
-    -webkit-text-stroke: 2px #fff;
+    -webkit-text-stroke: 2px #000000;
     color: transparent;
 }
 .content a{
     text-decoration: none;
     display: inline-block;
-    color: #fff;
+    color: #000000;
     font-size: 24px;
-    border: 2px solid #fff;
+    border: 2px solid #000000;
     padding: 14px 70px;
     border-radius: 50px;
     margin-top: 20px;
@@ -91,65 +82,107 @@ section{
 }
 
 .blink{
-    animation: blink 3.5s linear infinite;
+    animation: blink 10s linear infinite;
     color: black;
 }
 @keyframes blink{
-    50%{
+    80%{
         opacity: 0;
     }
 }
 .blink1{
-    animation: blink 5s linear infinite;
-    color: beige;
+    animation: blink 10s linear infinite;
+    color: rgb(0, 0, 0);
 }
 @keyframes blink1{
-    50%{
+    80%{
         opacity: 0;
     }
 }
 .blink2{
-    animation: blink 6s linear infinite;
-    color: beige;
+    animation: blink 15s linear infinite;
+    color: rgb(0, 0, 0);
 }
 @keyframes blink2{
-    50%{
+    80%{
         opacity: 0;
     }
 }
 .blink3{
-    animation: blink 7s linear infinite;
-    color: beige;
+    animation: blink 20s linear infinite;
+    color: rgb(0, 0, 0);
 }
 @keyframes blink3{
-    50%{
+    80%{
         opacity: 0;
     }
 }
 .blink4{
-    animation: blink 8s linear infinite;
-    color: beige;
+    animation: blink 25s linear infinite;
+    color: rgb(0, 0, 0);
 }
 @keyframes blink4{
-    50%{
+    80%{
         opacity: 0;
     }
 }
 .blink5{
-    animation: blink 9s linear infinite;
-    color: beige;
+    animation: blink 30s linear infinite;
+    color: rgb(0, 0, 0);
 }
 @keyframes blink5{
-    50%{
+    80%{
         opacity: 0;
     }
 }
 .blink6{
-    animation: blink 10s linear infinite;
-    color: beige;
+    animation: blink 35s linear infinite;
+    color: rgb(0, 0, 0);
 }
 @keyframes blink6{
-    50%{
+    80%{
         opacity: 0;
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/studyimage1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+
+
+
+}
+@keyframes animate{
+    0%{
+        background-image: url(images/studyimage2.jpg);
+    }20%{
+        background-image: url(images/studyimage3.jpg);
+    }40%{
+        background-image: url(images/studyimage4.jpg);
+    }60%{
+        background-image: url(images/studyimage5.jpg);
+    }80%{
+        background-image: url(images/studyimage6.jpg);
+    }100%{
+        background-image: url(images/studyimage7.jpg);
     }
 }
