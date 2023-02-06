@@ -94,11 +94,13 @@
       const noteColorInput = document.getElementById("note-color");
       
       saveButton.addEventListener("click", function() {
-        swal.fire({
-            icon: 'success', 
-            title: 'Made a new plan!',
-            text: 'Success to make a new note!',
-        });
+        Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your work has been saved',
+        showConfirmButton: false,
+        timer: 1500
+})
       });
       
       screenshotButton.addEventListener("click", function() {
