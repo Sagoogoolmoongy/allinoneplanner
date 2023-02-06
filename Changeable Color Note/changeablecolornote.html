@@ -104,7 +104,13 @@
       });
       
       screenshotButton.addEventListener("click", function() {
-        alert("Screenshot taken!");
+        Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'screenshot has been takens',
+        showConfirmButton: false,
+        timer: 1500
+})
       });
       
       noteColorInput.addEventListener("change", function() {
